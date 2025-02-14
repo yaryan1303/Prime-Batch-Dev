@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Navbar</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+      #nav {
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        background-color: #222864;
+        height: 60px;
+        padding: 0 20px;
+        flex-wrap: wrap;
+      }
+      .nav-links {
+        display: flex;
+        gap: 10px;
+      }
+      .nav-links div {
+        padding: 8px 15px;
+        background-color: #d9dde8;
+        color: black;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .nav-links div:hover {
+        box-shadow: 0 0 5px #ffffff;
+      }
+      #home,
+      #about,
+      #help {
+        gap: 12px;
+        border: 2px solid transparent; /* Set default border to avoid shifting */
+        border-top-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      #home:hover {
+        border: 2px solid blue;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+      }
+
+      #about:hover {
+        border: 2px solid blue;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+
+      #help:hover {
+        border: 2px solid blue;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+        border-top-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+      .search-container {
+        width: 421px;
+        margin-left: 120px;
+        display: flex;
+        align-items: center;
+        background-color: white;
+        padding: 5px 10px;
+        border-radius: 15px;
+      }
+      .search-container input {
+        border: none;
+        outline: none;
+        padding: 5px;
+        width: 150px;
+      }
+      .search-container::before {
+        content: "✨";
+        margin-right: 5px;
+      }
+      .search-container::after {
+        content: "🔍";
+        margin-left: 3px;
+        cursor: pointer;
+      }
+      .profile-icon {
+        margin-left: 12px;
+        width: 35px;
+        height: 35px;
+        background-color: teal;
+        border-radius: 50%;
+        border: 2px solid peachpuff;
+      }
+      .profile-icon:hover {
+        border: 5px dashed peachpuff;
+        transition: ease-in-out 0.5s;
+      }
+
+      /* Responsive Design */
+      @media (max-width: 768px) {
+        #nav {
+          flex-direction: column;
+          align-items: center;
+          height: auto;
+          padding: 10px;
+        }
+        .nav-links {
+          flex-direction: column;
+          align-items: center;
+          width: 100%;
+        }
+        .search-container {
+          width: 100%;
+          max-width: 350px;
+          margin: 10px 0;
+        }
+        .profile-icon {
+          margin-top: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="nav">
+      <div class="nav-links">
+        <div id="home">Home</div>
+        <div id="about">About</div>
+        <div id="help">Help</div>
+      </div>
+      <div class="search-container">
+        <input type="text" placeholder="Search here ..." />
+      </div>
+      <div class="profile-icon"></div>
+    </nav>
+  </body>
+</html>
