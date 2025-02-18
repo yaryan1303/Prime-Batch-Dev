@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+  </head>
+  <body>
+    <script>
+      let name = prompt("Enter your name");
+      let subjectsize = prompt("Enter number of subjects");
+      let sum = 0;
+      let heigest_marks = 0;
+      let subjectarray = [];
+      let marksarray = [];
+      for (let i = 0; i < subjectsize; i++) {
+        let subject = prompt("Enter subject name");
+        let marks = prompt("Enter the subject marks");
+        subjectarray.push(subject);
+        marksarray.push(marks);
+        if (marks > heigest_marks) {
+          heigest_marks = marks;
+        }
+        sum = sum + parseInt(marks);
+      }
+      console.log(name);
+      console.log(sum);
+      console.log(heigest_marks);
+      let percent = (sum / parseInt(subjectsize * 100)) * 100;
+      console.log(percent);
+    </script>
+  </body>
+</html>
