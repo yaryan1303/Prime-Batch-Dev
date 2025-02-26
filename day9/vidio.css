@@ -1,0 +1,296 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed; /* Make the navbar static (fixed at the top) */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the navbar stays above other content */
+}
+
+header #logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+header #inputBox {
+  display: flex;
+  align-items: center;
+  flex-grow: 1; /* Allow the search bar to grow and take up more space */
+  margin: 0 20px; /* Add some margin for spacing */
+}
+
+header #inputBox input {
+  padding: 12px; /* Increase padding to make the search bar bigger */
+  border: 1px solid #ccc;
+  border-radius: 20px; /* Rounded corners for the search bar */
+  flex-grow: 1; /* Allow the input to take up remaining space */
+  font-size: 16px; /* Increase font size */
+}
+
+header #inputBox button {
+  padding: 12px 20px; /* Increase padding to match the input size */
+  background-color: #ff0000;
+  border: 1px solid #bd2121;
+  border-radius: 20px; /* Rounded corners for the button */
+  margin-left: 10px; /* Add some spacing between input and button */
+  cursor: pointer;
+  font-size: 16px; /* Increase font size */
+}
+
+header #inputBox button:hover {
+  background-color: #e0e0e0; /* Add hover effect */
+}
+
+header #Create {
+  padding: 8px 12px;
+  background-color: #ff0000;
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/* Sidebar Styles */
+#sidebar {
+  width: 240px;
+  background-color: #fff;
+  padding: 10px;
+  border-right: 1px solid #e5e5e5;
+  position: fixed;
+  height: 100%;
+  overflow-y: auto;
+}
+
+#sidebar .btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  background-color: transparent;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  color: #333;
+}
+
+#sidebar .btn:hover {
+  background-color: #f0f0f0;
+}
+
+#sidebar hr {
+  margin: 10px 0;
+  border: 0;
+  border-top: 1px solid #e5e5e5;
+}
+
+/* Main Content Styles */
+main {
+  margin-top: 75px;
+  margin-left: 240px; /* Adjust based on sidebar width */
+  padding: 20px;
+}
+
+#videoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#video {
+  width: 100%;
+  height: 650px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#suggestions .card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#after_video {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-gap: 10px;
+  /* background-color: #2196F3; */
+  padding: 10px;
+}
+
+.item1, .item2 {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 36px;
+  color: #fff;
+  background-color: #d21919;
+  padding: 10px;
+  margin: 0 0 10px 0;
+  border-radius: 5px;
+}
+
+#suggestions .card:hover {
+  transform: scale(1.02);
+}
+
+#suggestions .card img {
+  width: 120px;
+  height: 90px;
+  border-radius: 4px;
+}
+
+#suggestions .card h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+#suggestions .card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Comment Section Styles */
+#comments {
+  margin-top: 20px;
+}
+
+#comments h3 {
+  margin-bottom: 10px;
+}
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.comment .user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.comment .comment-text {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #e5e5e5;
+}
+
+.comment .comment-text strong {
+  font-size: 14px;
+}
+
+.comment .comment-text p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+#videoContainer1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin: 10px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 10px;
+}
+    #comments {
+      width: 100%;
+      max-width: 100%;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+    }
+    #comments p {
+      background: #e1f5fe;
+      padding: 10px;
+      border-radius: 5px;
+      margin: 5px 0;
+    }
+    input[type="text"] {
+      width: 80%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    button {
+      padding: 10px 20px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background: #0056b3;
+    }

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <form onsubmit="handleonSubmit(event)">
+      <input type="email" name="email" id="" placeholder="email" required />
+      <input type="text" name="name" id="" placeholder="name" required />
+      <input type="text" name="city" id="" placeholder="city" required />
+
+      <button>Add</button>
+    </form>
+    <select name="" id="citySelect" onchange="showFilterelement()">
+      <option value="delhi">Delhi</option>
+      <option value="mumbai">mumbai</option>
+      <option value="Ghaziabd">Ghaziabd</option>
+    </select>
+    <div id="parent"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

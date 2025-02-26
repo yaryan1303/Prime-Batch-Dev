@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        YouTube
+        <img src="Youtube_logo.png" alt="" srcset="" id="logo" />
+      </div>
+      <div id="inputBox">
+        <input
+          type="text"
+          name="search-text"
+          onchange="search()"
+          placeholder="Search"
+        />
+        <button>Search</button>
+      </div>
+
+      <div>
+        <button id="Create">+ Create</button>
+      </div>
+    </header>
+
+    <aside id="sidebar">
+      <button class="btn">
+        <a href="./history.html" id="history">
+          History
+        </a>
+      </button>
+      <button class="btn">Playlist</button>
+      <button class="btn">Your vidios</button>
+      <button class="btn">Yours course</button>
+      <button class="btn">Watch later</button>
+      <button class="btn">Liked videos</button>
+
+      <hr />
+
+      <button class="btn">Trending</button>
+      <button class="btn">Shopping</button>
+      <button class="btn">Music</button>
+      <button class="btn">Dance</button>
+      <button class="btn">News</button>
+      <button class="btn">Jokes</button>
+    </aside>
+    <main>
+      <div id="videoContainer"></div>
+    </main>
+    <footer></footer>
+    <script src="script.js"></script>
+  </body>
+</html>

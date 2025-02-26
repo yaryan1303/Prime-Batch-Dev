@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="vidio.css" />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        YouTube
+        <img src="Youtube_logo.png" alt="YouTube Logo" id="logo" />
+      </div>
+      <div id="inputBox">
+        <input
+          type="text"
+          name="search-text"
+          onchange="search()"
+          placeholder="Search"
+        />
+        <button>Search</button>
+      </div>
+
+      <div>
+        <button id="Create">+ Create</button>
+      </div>
+    </header>
+
+    <aside id="sidebar">
+      <a href="./index.html">HOME</a>
+      <button class="btn">History</button>
+      <button class="btn">Playlist</button>
+      <button class="btn">Your videos</button>
+      <button class="btn">Your courses</button>
+      <button class="btn">Watch later</button>
+      <button class="btn">Liked videos</button>
+
+      <hr />
+
+      <button class="btn">Trending</button>
+      <button class="btn">Shopping</button>
+      <button class="btn">Music</button>
+      <button class="btn">Dance</button>
+      <button class="btn">News</button>
+      <button class="btn">Jokes</button>
+    </aside>
+
+    <main>
+      <div id="videoContainer">
+        <iframe
+          id="video"
+          src=""
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+        ></iframe>
+      </div>
+
+      <div id="after_video">
+        <div class="item1">
+          <h3>Comments</h3>
+          
+          <input
+            type="text"
+            id="commentInput"
+            placeholder="Write a comment..."
+          />
+          <button onclick="postComment()">Post</button>
+
+          <div id="comments"></div>
+          
+        </div>
+        <div class="item2">
+          <h3>Related Videos</h3>
+          <div id="videoContainer1"></div>
+        </div>
+      </div>
+
+      <!-- Dummy Video Suggestions -->
+    </main>
+
+    <script src="vidio.js"></script>
+  </body>
+</html>
