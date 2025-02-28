@@ -5914,6 +5914,7 @@ function postComment() {
   if (!comment) return;
 
   let comments = JSON.parse(localStorage.getItem("comments")) || [];
+
   comments.push(comment);
   localStorage.setItem("comments", JSON.stringify(comments));
 
@@ -5925,7 +5926,8 @@ function loadComments() {
   const commentsDiv = document.getElementById("comments");
   const comments = JSON.parse(localStorage.getItem("comments")) || [];
 
-  commentsDiv.innerHTML = comments.reverse()
+  commentsDiv.innerHTML = comments
+    .reverse()
     .map((comment) => `<p>${comment}</p>`)
     .join("");
 }
